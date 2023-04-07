@@ -1,20 +1,21 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    export XMODIFIERS=@im=fcitx
-    export GTK_IM_MODULE=fcitx
-    export QT_IM_MODULE=fcitx
-    export DWM="/home/ooohpi/workspace/dwm"
+  # Commands to run in interactive sessions can go here
+  set -x XMODIFIERS "@im=fcitx"
+  set -x GTK_IM_MODULE fcitx
+  set -x QT_IM_MODULE fcitx
+  set -x DWM "/home/ooohpi/workspace/dwm"
+  set -x PATH "/home/ooohpi/.local/bin" $PATH
 
-    theme_gruvbox dark soft
+  theme_gruvbox dark soft
 
-    alias q="exit"
-    alias c="clear"
-    alias nb="newsboat"
-    alias lg="lazygit"
-    alias wifis="nmcli device wifi list"
-    alias wific="nmcli device wifi connect"
-    alias z="zathura"
-    alias cg="chatgpt"
+  fishx
 
-    set -x PATH "/home/ooohpi/.local/bin" $PATH
+  abbr --add cg chatgpt
+  abbr --add q exit
+  abbr --add c clear
+  abbr --add nb newsboat
+  abbr --add lg lazygit
+  abbr --add wifil "nmcli device wifi list"
+  abbr --add wific "nmcli device wifi connect"
+  abbr --add z zathura
 end
