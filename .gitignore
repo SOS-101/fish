@@ -1,2 +1,3 @@
 conf.d/private.fish
 fish_variables
+*nvm*
